@@ -177,5 +177,5 @@ Open Source Collaborations | Technical Partnerships | Innovative Ventures
 ---
 
 <div align="center">
-  <i>From <a href="https://github.com/Grandillionaire">Grandillionaire</a> - Built with passion and code</i>
+  <i>From <a href="https://github.com/Grandillionaire">Grandillionaire</a> - Built with grit and code</i>
 </div>
