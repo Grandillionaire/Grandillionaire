@@ -1,137 +1,88 @@
-'use client'
-
-import { useState } from 'react'
-
 const projects = [
   {
     title: 'OpenBuild',
-    description: 'Open-source website builder with drag-and-drop visual editor, AI component generation, and Figma import.',
-    tech: ['React', 'TypeScript', 'TailwindCSS', 'AI'],
+    description: 'Open-source website builder with visual editor and AI generation',
+    year: '2024',
     link: 'https://github.com/Grandillionaire/openbuild',
-    featured: true,
   },
   {
     title: 'BrainVault',
-    description: 'Local-first note-taking app with markdown, wiki links, graph view, and semantic search.',
-    tech: ['React', 'TypeScript', 'SQLite', 'AI'],
+    description: 'Local-first note-taking with graph view and semantic search',
+    year: '2024',
     link: 'https://github.com/Grandillionaire/brainvault',
-    featured: true,
   },
   {
     title: 'Code Translator',
-    description: 'AI-powered code translation between 10+ programming languages with CLI and web interface.',
-    tech: ['Python', 'FastAPI', 'React', 'OpenAI'],
+    description: 'AI-powered code translation across 10+ languages',
+    year: '2024',
     link: 'https://github.com/Grandillionaire/code-translator',
-    featured: true,
   },
 ]
 
-const stats = [
-  { value: '€300K+', label: 'Revenue Generated' },
-  { value: '112+', label: 'Clients Served' },
-  { value: '93%', label: 'Efficiency Gains' },
-  { value: '6', label: 'Team Members' },
-]
-
-const skills = [
-  'React', 'Next.js', 'TypeScript', 'Python', 'FastAPI',
-  'Node.js', 'TailwindCSS', 'PostgreSQL', 'Docker',
-  'OpenAI', 'Claude', 'LangChain', 'n8n', 'GoHighLevel'
-]
-
 export default function Home() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 max-w-6xl mx-auto">
-        <div className="space-y-6">
-          <p className="text-cyan-400 font-mono text-sm tracking-wider">Hi, I'm</p>
-          <h1 className="text-5xl md:text-7xl font-bold">
-            Maxim Gagiev<span className="text-cyan-400">.</span>
-          </h1>
-          <h2 className="text-3xl md:text-5xl font-bold text-zinc-400">
-            I build things that matter.
-          </h2>
-          <p className="text-zinc-400 max-w-xl text-lg leading-relaxed">
-            Full-Stack Developer and founder of{' '}
-            <a href="https://myg-media.com" className="text-cyan-400 hover:underline">
-              MYG Media
-            </a>
-            . I specialize in AI automation, web development, and building digital solutions 
-            that drive real business growth.
-          </p>
-          <div className="flex gap-4 pt-4">
-            <a
-              href="#work"
-              className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors font-mono text-sm"
-            >
-              View My Work
-            </a>
-            <a
-              href="mailto:maximgagiev@myg-media.com"
-              className="px-6 py-3 bg-cyan-400 text-zinc-950 rounded hover:bg-cyan-300 transition-colors font-mono text-sm font-medium"
-            >
-              Get In Touch
-            </a>
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/90 backdrop-blur-sm">
+        <nav className="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+          <a href="/" className="text-lg tracking-tight">Maxim Gagiev</a>
+          <div className="flex gap-8 text-sm text-[var(--text-muted)]">
+            <a href="#work" className="hover:text-[var(--text)] transition-colors">Work</a>
+            <a href="#about" className="hover:text-[var(--text)] transition-colors">About</a>
+            <a href="mailto:maximgagiev@myg-media.com" className="hover:text-[var(--text)] transition-colors">Contact</a>
           </div>
-        </div>
-      </section>
+        </nav>
+      </header>
 
-      {/* Stats */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 border-t border-zinc-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gradient">{stat.value}</div>
-                <div className="text-zinc-500 mt-2 text-sm">{stat.label}</div>
-              </div>
-            ))}
+      {/* Hero */}
+      <section className="min-h-screen flex items-center px-6">
+        <div className="max-w-4xl mx-auto w-full pt-24">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tight">
+            Full-Stack Developer<br />
+            <span className="text-[var(--text-muted)]">& Founder</span>
+          </h1>
+          <p className="mt-8 text-xl md:text-2xl text-[var(--text-muted)] max-w-xl leading-relaxed">
+            Building digital solutions that drive business growth. 
+            Founder of MYG Media.
+          </p>
+          <div className="mt-12 flex gap-12 text-sm">
+            <div>
+              <div className="text-3xl md:text-4xl font-normal">€300K+</div>
+              <div className="text-[var(--text-muted)] mt-1">Revenue</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-normal">112</div>
+              <div className="text-[var(--text-muted)] mt-1">Clients</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-normal">2023</div>
+              <div className="text-[var(--text-muted)] mt-1">Founded</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Work */}
-      <section id="work" className="py-20 px-6 md:px-12 lg:px-24 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12">
-            <span className="text-cyan-400 font-mono text-xl">01.</span> Featured Projects
-          </h2>
-          <div className="grid gap-8">
+      <section id="work" className="py-24 px-6 border-t border-[var(--border)]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-sm text-[var(--text-muted)] uppercase tracking-widest mb-12">Selected Work</h2>
+          <div className="space-y-0">
             {projects.map((project, i) => (
               <a
                 key={i}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block p-8 rounded-xl border border-zinc-800 hover:border-cyan-400/50 bg-zinc-900/50 hover:bg-zinc-900 transition-all duration-300 hover-lift"
-                onMouseEnter={() => setHoveredProject(i)}
-                onMouseLeave={() => setHoveredProject(null)}
+                className="group block py-8 border-b border-[var(--border)] hover:pl-4 transition-all duration-300"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-2xl font-bold group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-2xl md:text-3xl font-normal group-hover:text-[var(--text-muted)] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-zinc-400 mt-2 max-w-xl">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {project.tech.map((tech, j) => (
-                        <span
-                          key={j}
-                          className="px-3 py-1 text-xs font-mono bg-zinc-800 text-zinc-300 rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-[var(--text-muted)] mt-2">{project.description}</p>
                   </div>
-                  <div className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
+                  <span className="text-sm text-[var(--text-muted)]">{project.year}</span>
                 </div>
               </a>
             ))}
@@ -139,57 +90,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 border-t border-zinc-800">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12">
-            <span className="text-cyan-400 font-mono text-xl">02.</span> Tech Stack
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill, i) => (
-              <span
-                key={i}
-                className="px-4 py-2 border border-zinc-700 rounded-full text-sm hover:border-cyan-400 hover:text-cyan-400 transition-colors cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 border-t border-zinc-800">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12">
-            <span className="text-cyan-400 font-mono text-xl">03.</span> About Me
-          </h2>
+      <section id="about" className="py-24 px-6 border-t border-[var(--border)]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-sm text-[var(--text-muted)] uppercase tracking-widest mb-12">About</h2>
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-4 text-zinc-400 leading-relaxed">
+            <div className="space-y-6 text-lg leading-relaxed text-[var(--text-muted)]">
               <p>
-                I started my journey in software at 17 and founded MYG Media at 18. 
-                Within 6 months, we grew to €300K+ in revenue serving 112+ clients 
-                across the DACH region.
+                I started building software at 17 and founded MYG Media at 18. 
+                Within six months, we grew to €300K+ in revenue serving over 
+                100 clients across the DACH region.
               </p>
               <p>
-                My focus is on AI automation and building tools that give businesses 
-                a competitive edge. I've been using AI daily since GPT-3.5 and specialize 
-                in context engineering, RAG systems, and workflow automation.
-              </p>
-              <p>
-                When I'm not coding, I'm exploring new technologies, trading markets, 
-                or planning the next venture.
+                My focus is on AI automation and building tools that give 
+                businesses a competitive edge. I've been working with AI daily 
+                since GPT-3.5.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/50">
-                <h3 className="font-bold text-lg mb-2">MYG Media</h3>
-                <p className="text-zinc-400 text-sm">Founder & CTO</p>
-                <p className="text-zinc-500 text-sm mt-1">AI automation agency based in Vienna</p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-sm text-[var(--text-muted)] uppercase tracking-widest mb-4">Expertise</h3>
+                <p className="text-lg">
+                  React, Next.js, TypeScript, Python, FastAPI, 
+                  Node.js, PostgreSQL, AI/ML, LangChain
+                </p>
               </div>
-              <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/50">
-                <h3 className="font-bold text-lg mb-2">Location</h3>
-                <p className="text-zinc-400 text-sm">Vienna, Austria 🇦🇹</p>
+              <div>
+                <h3 className="text-sm text-[var(--text-muted)] uppercase tracking-widest mb-4">Location</h3>
+                <p className="text-lg">Vienna, Austria</p>
               </div>
             </div>
           </div>
@@ -197,38 +125,32 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 border-t border-zinc-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            <span className="text-cyan-400 font-mono text-xl">04.</span> Get In Touch
-          </h2>
-          <p className="text-zinc-400 max-w-md mx-auto mb-8">
-            I'm always open to interesting projects and collaborations. 
-            Let's build something great together.
-          </p>
-          <a
+      <section className="py-24 px-6 border-t border-[var(--border)]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-sm text-[var(--text-muted)] uppercase tracking-widest mb-12">Contact</h2>
+          <a 
             href="mailto:maximgagiev@myg-media.com"
-            className="inline-block px-8 py-4 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors font-mono"
+            className="text-3xl md:text-4xl lg:text-5xl font-normal hover:text-[var(--text-muted)] transition-colors"
           >
-            Say Hello
+            maximgagiev@myg-media.com
           </a>
+          <div className="mt-12 flex gap-8 text-sm text-[var(--text-muted)]">
+            <a href="https://github.com/Grandillionaire" className="hover:text-[var(--text)] transition-colors">
+              GitHub
+            </a>
+            <a href="https://myg-media.com" className="hover:text-[var(--text)] transition-colors">
+              MYG Media
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-zinc-800 text-center text-zinc-500 text-sm">
-        <div className="flex justify-center gap-6 mb-4">
-          <a href="https://github.com/Grandillionaire" className="hover:text-cyan-400 transition-colors">
-            GitHub
-          </a>
-          <a href="https://myg-media.com" className="hover:text-cyan-400 transition-colors">
-            MYG Media
-          </a>
-          <a href="mailto:maximgagiev@myg-media.com" className="hover:text-cyan-400 transition-colors">
-            Email
-          </a>
+      <footer className="py-8 px-6 border-t border-[var(--border)]">
+        <div className="max-w-4xl mx-auto flex justify-between items-center text-sm text-[var(--text-muted)]">
+          <span>© 2024 Maxim Gagiev</span>
+          <span>Vienna, Austria</span>
         </div>
-        <p>Built with Next.js & Tailwind CSS</p>
       </footer>
     </main>
   )

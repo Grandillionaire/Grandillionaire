@@ -1,15 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'Maxim Gagiev — Full-Stack Developer & Founder',
-  description: 'Building digital solutions that drive business growth. Founder of MYG Media. €300K+ revenue, 112+ clients.',
+  title: 'Maxim Gagiev',
+  description: 'Full-Stack Developer & Founder. Building digital solutions that matter.',
   openGraph: {
-    title: 'Maxim Gagiev — Full-Stack Developer & Founder',
-    description: 'Building digital solutions that drive business growth.',
+    title: 'Maxim Gagiev',
+    description: 'Full-Stack Developer & Founder',
     url: 'https://grandillionaire.vercel.app',
     siteName: 'Maxim Gagiev',
     type: 'website',
@@ -22,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-zinc-950 text-zinc-100 antialiased`}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   )
 }
