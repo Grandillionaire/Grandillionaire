@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --accent: 0 217 255;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #22d3ee, #3b82f6);
+}
+
+.hover-lift {
+  transition: transform 0.3s;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(ellipse at top, #0a0a0a 0%, #000 100%);
+  min-height: 100vh;
+}
