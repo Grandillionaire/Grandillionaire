@@ -18,13 +18,7 @@
 
 ### About Me
 
-Full-stack developer who enjoys building tools from scratch. I like working across the entire stack — from low-level systems in Rust to interactive frontends in React/Vue. Most of my projects start as "what if I built this myself?" and turn into open source repos.
-
-- Currently building **[OpenBuild](https://github.com/Grandillionaire/openbuild)** — an open source drag-and-drop website builder
-- Learning more about **systems programming**, **cryptography**, and **AI agent architectures**
-- Interested in developer tools, local-first software, and anything you can build from scratch
-
----
+Full-stack developer and Overwatch Top 500 Hanzo/Sojourn
 
 ### Featured Projects
 
