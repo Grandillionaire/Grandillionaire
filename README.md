@@ -26,22 +26,36 @@ Full-stack developer and Overwatch Top 500 Hanzo/Sojourn
 <tr>
 <td width="50%" valign="top">
 
-**[OpenBuild](https://github.com/Grandillionaire/openbuild)** &nbsp; `TypeScript` `Vue`
-<br/>Open source website builder with drag-and-drop visual editor, component system, and one-click deploy.
+**[GREMLIN](https://github.com/Grandillionaire/gremlin)** &nbsp; `Python` `FastAPI`
+<br/>Chaotic AI that interrupts your coding sessions with unhinged challenges and absurd feature demands — all via voice. We are nothing without chaos.
 
 </td>
 <td width="50%" valign="top">
 
-**[BrainVault](https://github.com/Grandillionaire/brainvault)** &nbsp; `TypeScript` `Tauri`
-<br/>Local-first note-taking app with markdown, wiki links, graph view, and a browser extension.
+**[NutriLens](https://github.com/Grandillionaire/NutriLens)** &nbsp; `Swift` `iOS`
+<br/>AI-powered iOS calorie tracking app — snap a photo of your food and let the AI do the rest.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
+**[OpenBuild](https://github.com/Grandillionaire/openbuild)** &nbsp; `TypeScript` `Vue`
+<br/>Open source website builder with drag-and-drop visual editor, component system, and one-click deploy.
+
+</td>
+<td width="50%" valign="top">
+
 **[Rustchain](https://github.com/Grandillionaire/rustchain)** &nbsp; `Rust`
 <br/>Blockchain built from scratch — ed25519 signatures, PoW consensus, Merkle trees, P2P networking.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[BrainVault](https://github.com/Grandillionaire/brainvault)** &nbsp; `TypeScript` `Tauri`
+<br/>Local-first note-taking app with markdown, wiki links, graph view, and a browser extension.
 
 </td>
 <td width="50%" valign="top">
@@ -71,7 +85,7 @@ Full-stack developer and Overwatch Top 500 Hanzo/Sojourn
 ### Tech Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,js,python,rust,react,vue,nextjs,nodejs,express,fastapi,tailwind,docker,git,postgres,mongodb,sqlite,vercel,aws,figma&perline=10" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,python,rust,swift,react,vue,nextjs,nodejs,express,fastapi,tailwind,docker,git,postgres,mongodb,sqlite,vercel,aws,figma&perline=10" alt="Tech Stack" />
 </p>
 
 ---
